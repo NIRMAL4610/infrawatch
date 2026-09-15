@@ -64,8 +64,12 @@ if __name__ == "__main__":
         print("InfraWatch Services")
         print("-------------------")
 
-        for service, status in result.items():
-            print(f"{service}: {status}")
+        if result.get("status") == "UNAVAILABLE":
+            print(f"Status: {result['status']}")
+            print(f"Reason: {result['reason']}")
+        else:
+            for service, status in result["services"].items():
+                print(f"{service}: {status}")
 
     elif command == "history":
         result = get_history()

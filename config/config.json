@@ -1,0 +1,20 @@
+{
+    "monitoring": {
+        "interval": 300,
+        "disk_paths": ["/"]
+    },
+    "thresholds": {
+        "warning": 80,
+        "critical": 90
+    },
+    "services": [
+        "ssh",
+        "cron"
+    ],
+    "database": {
+        "path": "data/infrawatch.db"
+    },
+    "alerts": {
+        "log_file": "logs/alerts.log"
+    }
+}

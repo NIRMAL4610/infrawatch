@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /home/ubuntu/projects/infrawatch
+/home/ubuntu/projects/infrawatch/.venv/bin/python -m src.infrawatch.cli "$@"

@@ -40,12 +40,15 @@ if __name__ == "__main__":
     if command == "health":
         result = get_health()
 
+        print("-----------------")
         print("InfraWatch Health")
         print("-----------------")
         print("Status:", result["status"])
 
     elif command == "metrics":
         result = get_metrics()
+
+        print("------------------")
         print("InfraWatch Metrics")
         print("------------------")
         print("CPU:", result["cpu"], "%")
@@ -54,7 +57,8 @@ if __name__ == "__main__":
 
     elif command == "services":
         result = get_services()
-        
+
+        print("-------------------")
         print("InfraWatch Services")
         print("-------------------")
 
@@ -67,7 +71,8 @@ if __name__ == "__main__":
 
     elif command == "history":
         result = get_history()
-        
+
+        print("------------------")
         print("InfraWatch History")
         print("------------------")
 

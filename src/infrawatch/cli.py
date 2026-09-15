@@ -52,12 +52,6 @@ if __name__ == "__main__":
         print("Memory:", result["memory"], "%")
         print("Disk:", result["disk"], "%")
 
-        print("\nServices")
-        print("--------")
-
-        for service, status in result["services"].items():
-            print(service, status)
-
     elif command == "services":
         result = get_services()
         
